@@ -15,19 +15,19 @@ namespace MethodOverloading
 	        return num1 + num2;
 	    }
 	    
-	    public static string Add(int num1, int num2, bool Check)
+	    public static string Add(int num1, int num2, bool check)
 	    {
 	        var sum = num1 + num2;
 	        
-	        if(Check == true && sum > 1)
+	        if(check == true && sum > 1)
 	        {
 	            return $"{sum} dollars";
 	        }
-	        else if(Check == true && sum == 1)
+	        else if(check == true && sum == 1)
 	        {
 	            return $"{sum} dollar";
 	        }
-	        else if(Check == true && sum < 1)
+	        else if(check == true && sum < 1)
 	        {
 	            return $"{sum} dollars";
 	        }
@@ -39,6 +39,8 @@ namespace MethodOverloading
         static void Main(string[] args)
         { 
           Console.WriteLine(Add(1,2));
+          Console.WriteLine(Add(1.81m,2.13m));
+          Console.WriteLine(Add(2,5,true));
         }
     }
 }
